@@ -1,0 +1,39 @@
+div.Title h3 {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.card {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+i {
+  font-size: 60px;
+  margin: 20px;
+}
+
+p.topsymbol {
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.formCity {
+  margin: 10px;
+}
+
+.changeCity {
+  margin: 10px 0px;
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
+}
+
+.changeCity:hover {
+  opacity: 1;
+  cursor: pointer;
+}

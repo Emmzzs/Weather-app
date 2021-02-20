@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+   <script
+     src="https://kit.fontawesome.com/1f96e43201.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2></h2>
+      <form  class="formCity" id="form_City">
+        <input
+          type="text"
+          id="inputCity"
+          placeholder="City"
+          autocomplete="off"
+          />
+          <input type="submit" class="btn btn-success changeCity" value="Search"></button>
+          <input type="button" class="btn btn-success getCurrent" value="Get Current"></button>
+        </form>
+
+        <br />
+      <div class="row">
+        <div class="col-4 Title">
+          <h3>Today</h3>
+          <div class="card .h-100" style="width: 18rem;">
+            <div class="card-body">
+              <p class="card-text" id="Today">
+                forecast
+              </p>
+              <p class="card-text" id="forecastToday">
+
+              </p>
+            </div>
+            <p>
+              <i class="far fa-moon"></i>
+            </p>
+          </div>
+        </div>
+        <div class="col-2 Title">
+          <h3>Tomorrow</h3>
+          <div class="card .h-100" style="width: 12rem;">
+            <div class="card-body">
+              <p class="card-text">
+                forecast
+              </p>
+            </div>
+            <p>
+              <i class="far fa-moon"></i>
+            </p>
+          </div>
+        </div>
+        <div class="col-2 Title">
+          <h3>Date</h3>
+          <div class="card .h-100" style="width: 12rem;">
+            <div class="card-body">
+              <p class="card-text">
+                forecast
+              </p>
+            </div>
+            <p>
+              <i class="far fa-moon"></i>
+            </p>
+          </div>
+        </div>
+        <div class="col-2 Title">
+          <h3>Date</h3>
+          <div class="card .h-100" style="width: 12rem;">
+            <div class="card-body">
+              <p class="card-text">
+                forecast
+              </p>
+            </div>
+            <p>
+              <i class="far fa-moon"></i>
+            </p>
+          </div>
+        </div>
+        <div class="col-2 Title">
+          <h3>Date</h3>
+          <div class="card .h-100" style="width: 12rem;">
+            <div class="card-body">
+              <p class="card-text">
+                forecast
+              </p>
+            </div>
+            <p>
+              <i class="far fa-moon"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
