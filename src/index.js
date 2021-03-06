@@ -1,10 +1,8 @@
 
-function getTimeDay(timestamp) {
-  let now = new Date(timestamp);
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
 
-  let hours = now.getHours();
 
-  let day = now.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -15,19 +13,33 @@ function getTimeDay(timestamp) {
     "Saturday"
   ];
 
-  let today = days[day];
+  let day = days[date.getDay()];
+  return `${day} ${formatHours(timestamp)}`;
+}
 
-  let minutes = now.getMinutes();
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  
 
-  return `${today} ${hours}:${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
+ 
+
+
 function displayTemperature(response) {
-  let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -86,21 +98,6 @@ function searchCity(city) {
   axios.get(apiUrl).then(dispalyForecast);
 }
 
-function getCurrentCity(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(findPosition);
-}
-
-function findPosition(position) {
-  console.log(position);
-  let currentLat = position.coords.latitude;
-  let currentLong = position.coords.longitude;
-
-  let apiKey = "d57548feb68ff97f5b47ea4b49ae289d";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
-  axios.get(apiURL).then(displayTemperature);
-}
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
@@ -137,3 +134,10 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Zoerl-Parwijs");
+
+
+
+
+
+
+
