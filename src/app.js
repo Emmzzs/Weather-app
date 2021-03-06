@@ -1,4 +1,3 @@
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
 
@@ -16,6 +15,8 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${formatHours(timestamp)}`;
 }
+
+console.log(formatDate)
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);
@@ -133,11 +134,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("Zoerl-Parwijs");
-
-
-
-
-
-
-
+searchCity("Zoerle-Parwijs")
