@@ -123,6 +123,28 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function findPosition(position) {
+  console.log(position);
+  let currentLat = position.coords.latitude;
+  let currentLong = position.coords.longitude;
+
+  let apiKey = "d57548feb68ff97f5b47ea4b49ae289d";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(dispalyForecast);
+
+}
+
+function getCurrentCity(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(findPosition);
+}
+
+let currentCity = document.querySelector(".getCurrent");
+currentCity.addEventListener("click", getCurrentCity);
+
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -134,4 +156,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-searchCity("Zoerle-Parwijs")
+searchCity("Tokyo")
