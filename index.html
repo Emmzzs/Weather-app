@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
     <meta charset="UTF-8" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
@@ -11,8 +10,8 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-   <script
-     src="https://kit.fontawesome.com/1f96e43201.js"
+    <script
+      src="https://kit.fontawesome.com/1f96e43201.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/styles.css" />
@@ -23,25 +22,32 @@
     <div class="container">
       <div class="wrapper">
         <div class="app">
-          <form  class="formCity" id="form_City"></form>
+          <form class="formCity" id="search-form">
             <div class="row">
               <div class="col-6">
                 <h2></h2>
                 <input
-                  type="text"
-                  id="inputCity"
+                  type="search"
+                  class="form-control"
+                  id="city-input"
                   placeholder="City"
                   autocomplete="off"
-                  />
+                />
               </div>
               <div class="col-6">
-                <input type="submit" class="btn btn-success changeCity" value="Search"></input>
-                <input type="button" class="btn btn-success getCurrent" value="Get Current"></input>
+                <input
+                  type="submit"
+                  class="btn btn-success changeCity"
+                  value="Search"
+                />
+                <input
+                  type="button"
+                  class="btn btn-success getCurrent"
+                  value="Get Current"
+                />
               </div>
             </div>
           </form>
-          
-
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -71,14 +77,12 @@
             <div class="row weather-forecast" id="forecast"></div>
           </div>
           <small>
-          <a
-            href="https://github.com/Emmzzs/Weather-app"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Emma Lievens
+            <a href="https://github.com/Emmzzs/Weather-app" target="_blank"
+              >Open-source code</a
+            >
+            by Emma Lievens
           </small>
-        </div>  
+        </div>
       </div>
     </div>
     <script src="src/app.js"></script>
