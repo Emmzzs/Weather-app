@@ -23,8 +23,8 @@
     <div class="container">
       <div class="wrapper">
         <div class="app">
-          <div class="row">
-            <form  class="formCity" id="form_City"></form>
+          <form  class="formCity" id="form_City"></form>
+            <div class="row">
               <div class="col-6">
                 <h2></h2>
                 <input
@@ -38,8 +38,8 @@
                 <input type="submit" class="btn btn-success changeCity" value="Search"></input>
                 <input type="button" class="btn btn-success getCurrent" value="Get Current"></input>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
           
 
           <div class="overview">
@@ -52,7 +52,6 @@
           <div class="row">
             <div class="col-6">
               <div class="clearfix weather-temperature">
-                <p id="Today"></p>
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
                   <strong id="temperature"></strong
@@ -69,6 +68,7 @@
                 <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
+            <div class="row weather-forecast" id="forecast"></div>
           </div>
           <small>
           <a
