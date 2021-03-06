@@ -2,6 +2,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
 div.Title h3 {
   text-align: center;
   margin: 5px;
@@ -9,25 +24,11 @@ div.Title h3 {
 }
 
 div.wrapper {
+  max-width: 600px;
   border: 2px solid;
   border-radius: 5px;
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
-}
-
-i {
-  font-size: 60px;
-  margin: 20px;
-}
-
-p.topsymbol {
-  text-align: center;
-  padding: 5px;
-  margin: 10px;
-}
-
-.formCity {
-  margin: 10px;
 }
 
 .changeCity {
