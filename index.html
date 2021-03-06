@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    
     <meta charset="UTF-8" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
@@ -15,98 +15,72 @@
      src="https://kit.fontawesome.com/1f96e43201.js"
       crossorigin="anonymous"
     ></script>
-    <link href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App</title>
   </head>
 
   <body>
     <div class="container">
-      <h2></h2>
-      <form  class="formCity" id="form_City">
-        <input
-          type="text"
-          id="inputCity"
-          placeholder="City"
-          autocomplete="off"
-          />
-          <input type="submit" class="btn btn-success changeCity" value="Search"></button>
-          <input type="button" class="btn btn-success getCurrent" value="Get Current"></button>
-        </form>
+      <div class="wrapper">
+        <div class="app">
+          <div class="row">
+            <form  class="formCity" id="form_City"></form>
+              <div class="col-9">
+                <h2></h2>
+                <input
+                  type="text"
+                  id="inputCity"
+                  placeholder="City"
+                  autocomplete="off"
+                  />
+              </div>
+              <div class="col-3">
+                <input type="submit" class="btn btn-success changeCity" value="Search"></input>
+                <input type="button" class="btn btn-success getCurrent" value="Get Current"></input>
+              </div>
+            </form>
+          </div>
+          
 
-        <br />
-      <div class="row">
-        <div class="col-4 Title">
-          <h3>Today</h3>
-          <div class="card .h-100" style="width: 18rem;">
-            <div class="card-body">
-              <p class="card-text" id="Today">
-                forecast
-              </p>
-              <p class="card-text" id="forecastToday">
-
-              </p>
-            </div>
-            <p>
-              <i class="far fa-moon"></i>
-            </p>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
           </div>
-        </div>
-        <div class="col-2 Title">
-          <h3>Tomorrow</h3>
-          <div class="card .h-100" style="width: 12rem;">
-            <div class="card-body">
-              <p class="card-text">
-                forecast
-              </p>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <p id="Today"></p>
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
             </div>
-            <p>
-              <i class="far fa-moon"></i>
-            </p>
-          </div>
-        </div>
-        <div class="col-2 Title">
-          <h3>Date</h3>
-          <div class="card .h-100" style="width: 12rem;">
-            <div class="card-body">
-              <p class="card-text">
-                forecast
-              </p>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
             </div>
-            <p>
-              <i class="far fa-moon"></i>
-            </p>
           </div>
-        </div>
-        <div class="col-2 Title">
-          <h3>Date</h3>
-          <div class="card .h-100" style="width: 12rem;">
-            <div class="card-body">
-              <p class="card-text">
-                forecast
-              </p>
-            </div>
-            <p>
-              <i class="far fa-moon"></i>
-            </p>
-          </div>
-        </div>
-        <div class="col-2 Title">
-          <h3>Date</h3>
-          <div class="card .h-100" style="width: 12rem;">
-            <div class="card-body">
-              <p class="card-text">
-                forecast
-              </p>
-            </div>
-            <p>
-              <i class="far fa-moon"></i>
-            </p>
-          </div>
-        </div>
-        <a href="https://github.com/Emmzzs/Weather-app">Open source code</a>
-        coded by Emma Lievens
+          <small>
+          <a
+            href="https://github.com/Emmzzs/Weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Emma Lievens
+          </small>
+        </div>  
       </div>
     </div>
-    
-    <script src="src/index.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>
