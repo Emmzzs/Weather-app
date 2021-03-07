@@ -59,8 +59,8 @@ div.wrapper {
 
 .weather-temperature img {
   margin-right: 5px;
-  height: 80px;
-  width: 80px;
+  height: 64px;
+  width: 64px;
 }
 
 .weather-temperature strong {
