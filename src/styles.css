@@ -2,6 +2,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  color: black;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -17,18 +25,16 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-div.Title h3 {
-  text-align: center;
-  margin: 5px;
-  padding: 5px;
-}
-
 div.wrapper {
   max-width: 600px;
   border: 2px solid;
   border-radius: 5px;
   margin: 20px auto;
   padding: 20px;
+}
+
+.overview {
+  margin-bottom: 20px;
 }
 
 .changeCity {
@@ -40,4 +46,62 @@ div.wrapper {
 .changeCity:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 100px;
+  width: 100px;
+}
+
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -30px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+}
+
+.weather-app {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+.weather-forecast h3 {
+  color: rgb(135, 135, 135);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: rgb(135, 135, 135);
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
